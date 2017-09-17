@@ -8,9 +8,17 @@
         "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0"
+        "laravel/tinker": "~1.0",
+        "gloudemans/shoppingcart": "^2.3",
+        "codecourse/notify": "^1.1",
+        "consoletvs/charts": "4.*",
+        "barryvdh/laravel-cors": "^0.9.2",
+        "tom-lingham/searchy": "2.*",
+        "tymon/jwt-auth": "0.5.*",
+        "infyomlabs/laravel-generator": "5.3.x-dev"
     },
     "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.4",
         "filp/whoops": "~2.0",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
@@ -46,7 +54,13 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover"
-        ]
+        ],
+        "post-update-cmd": [
+        "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+        "php artisan ide-helper:generate",
+        "php artisan ide-helper:meta",
+        "php artisan optimize"
+    ]
     },
     "config": {
         "preferred-install": "dist",

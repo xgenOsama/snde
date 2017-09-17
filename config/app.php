@@ -176,6 +176,12 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
+        TomLingham\Searchy\SearchyServiceProvider::class,
+        Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+       // \InfyOm\Generator\InfyOmGeneratorServiceProvider::class,
+        Codecourse\Notify\NotifyServiceProvider::class,
+        ConsoleTVs\Charts\ChartsServiceProvider::class,
 
     ],
 
@@ -225,7 +231,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        'Notify' => Codecourse\Notify\Facades\Notify::class,
+        'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
+        'Searchy' => TomLingham\Searchy\Facades\Searchy::class,
+        'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
+        'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class
     ],
 
 ];
